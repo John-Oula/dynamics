@@ -1,0 +1,7 @@
+% Plant Dynamics
+load("dimDerivatives.m");
+
+
+% Initial conditions
+h0 = 800; % km
+w0 = 0;

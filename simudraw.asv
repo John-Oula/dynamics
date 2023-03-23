@@ -1,0 +1,12 @@
+function simudraw()
+
+load simudata; % load data
+
+% Compute Total velocity
+
+Vt = sqrt(y(:1)^2 ) 
+
+
+subplot(2,1,1); % plot figures in a tiled way
+plot(t,y(:,2)+1);
+xlabel ("Vertical velocity v(t)");

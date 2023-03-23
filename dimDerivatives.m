@@ -117,9 +117,9 @@ pol = eig(longSys);
 
 
 % Step response of the UAV
-figure(1)
-step(longSys,T); % u w q theta
-hold on;
+%figure(1)
+%step(longSys,T); % u w q theta
+%hold on;
 
 % Desired closed-loop eigenvalues
 pl = [ -1.8 + 1.5i;
@@ -135,20 +135,20 @@ Acl = A-B*K; % Closed-loop A matrix
 Ecl = eig(Acl);
 
 % Create closed-loop system
-syscl = ss(Acl,B,C,D);
+%syscl = ss(Acl,B,C,D);
 
-figure(1);
+%figure(1);
 
 % Check step response
-step(syscl);
+%step(syscl);
 
-Kdc = dcgain(syscl);
-Kr = 1/Kdc;
+%Kdc = dcgain(syscl);
+%Kr = 1/Kdc;
 
 % Create scaled input closed loop system
-sys_scaled = ss(Acl, B*16,C,D);
-step(sys_scaled);
-info = stepinfo(sys_scaled);
+%sys_scaled = ss(Acl, B*16,C,D);
+%step(sys_scaled);
+%info = stepinfo(sys_scaled);
 
 %info.Overshoot
 %info.RiseTime

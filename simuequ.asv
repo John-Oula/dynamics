@@ -1,0 +1,4 @@
+function dy=simuequ(t,y)
+dy=zeros(14,1); % dy: a vector of small increments of y during each time step
+% dy also can be considered as \dot{y} in the differential equations.
+
